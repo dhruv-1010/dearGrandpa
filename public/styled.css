@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url("./map.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100vw 170vh;
+}
+
+h1{
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 2rem;
+    margin-bottom: 4rem;
+}
+
+section{
+    width: 97vw;
+    margin: 0px auto;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 2.2rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center ;
+    padding: 40px;
+    position: relative;
+}
+
+.level-1{
+    top: 50px;
+    left: 20px;
+}
+
+.level-2{
+    top: 65px;
+    left: 100px;
+}
+
+.level-3{
+    top: 80px;
+    left: 180px;
+}
+
+.level-4{
+    top: 95px;
+    left: 260px;
+}
+
+.level-5{
+    top: 110px;
+    left: 340px;
+}
+
+.level-6{
+    top: 165px;
+    left: 420px;
+}
+
+.level-7{
+    top: 270px;
+    left: 90px;
+}
+
+.level-8{
+    top: 300px;
+    right: 260px;
+}
+
+.level-9{
+    top: 310px;
+    left: 840px;
+}
+
+.level-10{
+    top: 330px;
+    left: 510px;
+}
+
+.level-11{
+    top: 370px;
+    left: 100px;
+}
+
+.level-12{
+    top: 425px;
+    right: 320px;
+}
+
+.level-13{
+    top: 530px;
+    right: 250px;
+}
+
+.level-14{
+    top: 545px;
+    right: 130px;
+}
+
+.level-15{
+    top: 570px;
+    right: 70px;
+}
+
+.level-16{
+    top: 590px;
+    right: 10px;
+}
+
+.level-17{
+    top: 700px;
+    left: 1000px;
+}
+
+.level-18{
+    top: 725px;
+    left: 640px;
+}
+
+.level-19{
+    top: 750px;
+    left: 300px;
+}
+
+.level-20{
+    top: 770px;
+    right: 50px;
+}

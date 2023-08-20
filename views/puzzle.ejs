@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styled.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@900&family=Handjet:wght@500&display=swap');
+
+        /* 
+font-family: 'Anybody', cursive;
+font-family: 'Handjet', cursive;
+*/
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Handjet', cursive;
+            color: white;
+            background-color: black;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1 {
+            font-family: 'Handjet', cursive;
+            font-weight: 500;
+            font-size: 5vw;
+        }
+
+        #nav {
+            display: grid;
+            grid-template-columns: 2fr 6fr 2fr;
+            gap: 20px;
+        }
+
+        #nav h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #nav-list {
+            display: flex;
+            /* grid-template-columns: 1fr 1fr 1fr 6fr; */
+            font-size: 2vw;
+            list-style: none;
+            padding: 10px;
+        }
+
+        #nav-list a {
+            margin: 10px;
+        }
+
+        #nav-list a:hover {
+            -webkit-box-shadow: 0px 0px 59px 6px rgba(133, 69, 129, 0.46);
+            -moz-box-shadow: 0px 0px 59px 6px rgba(133, 69, 129, 0.46);
+            box-shadow: 0px 0px 59px 6px rgba(133, 69, 129, 0.46);
+            border-bottom: 1px solid pink;
+        }
+
+        .btn {
+            font-size: 2vw;
+            border: 0;
+            width: 15vw;
+            border-radius: 20px;
+            padding: 10px;
+            color: white;
+            background-color: rgb(65, 12, 114);
+            -webkit-box-shadow: 0px 0px 33px 14px rgba(133, 69, 129, 0.46);
+            font-family: 'Handjet', cursive;
+            -moz-box-shadow: 0px 0px 33px 14px rgba(133, 69, 129, 0.46);
+            box-shadow: 0px 0px 33px 14px rgba(133, 69, 129, 0.46);
+            margin-top: 5vh;
+        }
+
+        hr {
+            height: 0.5vh;
+            width: 1.1vw;
+            background: black;
+            display: inline-block;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Levels</h1>
+
+    <section>
+        <% for(let item of obj){%>
+            <a href="/level/<%=item._id%>"> <%= item.problem_id%></a>
+            <%}%>
+
+    </s ection>
+</body>
+
+</html>
