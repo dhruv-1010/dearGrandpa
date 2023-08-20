@@ -8,7 +8,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'))
 app.use(express.static(path.join(__dirname, '/public')));
 const port = 8000 || 3000;
-
+const level=1;
 
 // important for restAPI
 const methodOverride = require('method-override');
@@ -82,31 +82,72 @@ app.get('/logout', function (req, res, next) {
     });
 });
 
+// ques = {
+//     problem_id: 1,
+//     title: "Mystery Inscriptions",
+//     description: "Amelia discovers inscriptions with reversed words. She must reverse the words to decipher the message.",
+//     testcases: [
+//       {
+//         input: "sdrawkcab",
+//         output: "backwards"
+//       },
+//       {
+//         input: "emordnilap",
+//         output: "palindrome"
+//       },
+//       {
+//         input: "noitseuq",
+//         output: "question"
+//       },
+//       {
+//         input: "elbissopmi",
+//         output: "impossible"
+//       }
+//     ],
+//     isSolved : false
+//   }
+// Question.create(ques);
 
 
 
 
 
+app.get('/map', isAuthenticated, async (req, res) => {
+  let obj = await Question.find({}).sort({problem_id:1});
+  res.render('puzzle', { obj });
+});
+
+// Middleware to check if the user is authenticated
+function isAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+
+  // Redirect to login page if not authenticated
+  res.redirect('/login');
+}
 
 
-
- 
-app.get('/map',async (req,res)=>{
-    let obj = await Question.find({}); 
-    res.render('puzzle',{obj});
-})
 app.get('/level/:id', async (req, res) => {
-    try {
+    
+
       let { id } = req.params;
       const Qobj = await Question.findById(id);
+      if (Qobj) {
+        if (Qobj.isSolved) {
+          return   res.render('show', { Qobj });
+        } else {
+            
+          console.log('This question has not been solved yet.');
+          return res.send("you need to clear previos level")
+        }
+    }
+
       if (!Qobj) {
         return res.status(404).send("Question not found");
       }
-      res.render('show', { Qobj });
-    } catch (error) {
-      console.error("Error:");
-      res.status(500).send("Internal Server Error");
-    }
+      
+    
 });
 
 app.get('/home',(req,res)=>{

@@ -17,11 +17,13 @@ font-family: 'Handjet', cursive;
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+    
     }
 
     body {
         font-family: 'Handjet', cursive;
         color: white;
+    
         background-color: black;
     }
 
@@ -86,13 +88,14 @@ font-family: 'Handjet', cursive;
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-image: url('https://tse3.mm.bing.net/th?id=OIP.JaV2MGcq7pciKCbQe7lJrgHaJQ&pid=Api&P=0&h=180');
+        background-image: url('https://st.depositphotos.com/25216900/54336/i/450/depositphotos_543366812-stock-photo-dark-cement-wall-background-vintage.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        color: black;
+        color:white;
         width: 50vw;
-        max-height: 100vh;
-        overflow: scroll;
+        /* max-height: 100vh; */
+        overflow:hidden;
+        /* border: 3px solid #f7f7f7; */
     }
 
     section {
@@ -115,7 +118,7 @@ font-family: 'Handjet', cursive;
     .btn {
 
         background-color: white;
-        color: black;
+        color: white;
         border: none;
         border-radius: 5px;
         box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
@@ -138,9 +141,10 @@ font-family: 'Handjet', cursive;
     }
 
 
-    /*testcase*/
     .test-case {
         margin: 3vw;
+        
+        box-shadow: 0 2px 4px rgb(252, 250, 250);
     }
 
     .test-case h2 {
@@ -179,6 +183,7 @@ font-family: 'Handjet', cursive;
     .input p,
     .output p {
         margin: 0;
+        
     }
 
     .hint {
@@ -214,16 +219,27 @@ font-family: 'Handjet', cursive;
 
 
     p {
-        color: rgb(0, 0, 0);
+        color:rgb(255, 255, 255);
     }
 
     #main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+
+ 
+    }
+    .screen{
+        border: 3px solid #f7f7f7;
     }
 
     #compiler {
         width: 40vw;
+    }
+    .treasure{
+        margin-left: 50px;
+        height: 250px;
+        width: 250px;
     }
 </style>
 
@@ -244,7 +260,7 @@ font-family: 'Handjet', cursive;
         </ul>
         <h1>User</h1>
     </navbar>
-    <section id="main">
+    <section id="main" class="screen">
         <div id="qst">
             <div id="main">
                 <div>
@@ -252,12 +268,12 @@ font-family: 'Handjet', cursive;
                         <%=Qobj.problem_id%>
                             <%=Qobj.title%>
                     </h1>
-                    <button class="btn">hint</button>
+                    <!-- <button class="btn">hint</button> -->
 
 
                 </div>
-                <div class="hint hidden">
-                    <p>..</p>
+                <div class=" ">
+                    <img  class="treasure" src="https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Money.PNG/Transparent_Treasure_Chest_PNG_Picture.png?m=1434276666" alt="">
                 </div>
 
 

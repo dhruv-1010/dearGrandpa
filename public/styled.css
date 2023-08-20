@@ -6,9 +6,7 @@
 
 
 body{
-    background: url("./map.jpeg");
-    background-repeat: no-repeat;
-    background-size: 100vw 170vh;
+    background: rgb(48, 46, 46);
 }
 
 h1{
@@ -19,19 +17,31 @@ h1{
 }
 
 section{
-    width: 97vw;
+    width: 80vw;
     margin: 0px auto;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+} 
 
 a{
     text-decoration: none;
     color: white;
-    font-size: 2.2rem;
-    border: 1px solid black;
+    font-size: 2.4rem;
+    border: 4px solid rgba(133, 69, 129, 0.46);
     border-radius: 50%;
     text-align: center ;
-    padding: 40px;
-    position: relative;
+    padding: 74px ;
+    margin: 20px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
+
+a:hover{
+    background-color: rgba(133, 69, 129, 0.46);
+    transform: scale(1.1); 
 }
 
 .level-1{
